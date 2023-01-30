@@ -3,21 +3,42 @@ const girafa = true;
 const elefante = true;
 const macaco = false;
 
-const compareTrue = (parametroA, parametroB) => {
-  if (parametroA === true && parametroB === true){
+function compareTrue(parametroA, parametroB){
+  if(parametroA === true && parametroB === true){
   return true;
 }
-  else {
-    return false;
+  else{
+  return false;
   }
 }
 
 // Desafio 2 - Crie a função splitSentence
 
+function splitSentence (phrase) {
+  return phrase.split(' ');
+}
+
+// const splitSentence = (phrase) => phrase.split(' ');
+
+console.log(splitSentence('go Trybe'));
+console.log(splitSentence('vamo que vamo'));
+console.log(splitSentence('foguete'));
+
 // Desafio 3 - Crie a função concatName
 
-// Desafio 4 - Crie a função footballPoints
+function concatName(array) {
+  const primeiroItem = array[0]
+  const ultimoItemIndex = array.length - 1
+  const ultimoItem = array[ultimoItemIndex]
 
+return ultimoItem + ', ' + primeiroItem
+}
+
+// Desafio 4 - Crie a função footballPoints
+function footballPoints(wins, ties){
+  resultado = (wins * 3) + ties;
+  return resultado
+}
 // Desafio 5 - Crie a função highestCount
 
 // Desafio 6 - Crie as funções calcTriangleArea, calcRectangleArea e calcAllAreas
