@@ -20,19 +20,17 @@ function splitSentence (phrase) {
 
 // const splitSentence = (phrase) => phrase.split(' ');
 
-console.log(splitSentence('go Trybe'));
-console.log(splitSentence('vamo que vamo'));
-console.log(splitSentence('foguete'));
 
 // Desafio 3 - Crie a função concatName
 
 function concatName(array) {
   const primeiroItem = array[0]
-  const ultimoItemIndex = array.length - 1
+  const ultimoItemIndex = [array.length - 1]
   const ultimoItem = array[ultimoItemIndex]
 
 return ultimoItem + ', ' + primeiroItem
 }
+
 
 // Desafio 4 - Crie a função footballPoints
 function footballPoints(wins, ties){
@@ -40,8 +38,53 @@ function footballPoints(wins, ties){
   return resultado
 }
 // Desafio 5 - Crie a função highestCount
+function highestCount(array){
+  for (let index = 0; index < array.length; index++) {
+     
+  }
+}
+console.log(highestCount([1, 2, 3, 4]))
 
 // Desafio 6 - Crie as funções calcTriangleArea, calcRectangleArea e calcAllAreas
+function calcTriangleArea(base, height) {
+  const triangulo = (base * height) / 2;
+  return triangulo
+}
+
+function calcRectangleArea(base, height) {
+  const retangulo = base * height;
+  return retangulo
+}
+
+function calcAllAreas(base, height, form) {
+  let resultado ='';
+  if(form === 'triângulo') {
+    const area = calcTriangleArea(base, height);
+    resultado = 'O valor da área do triângulo é de: ' + area;
+    
+  }
+  else if(form === 'retângulo') {
+    const area = calcRectangleArea(base, height);
+    resultado = 'O valor da área do retângulo é de: ' + area;
+    
+  }
+  else{
+    resultado = 'Não foi possível fazer o cálculo, insira uma forma geométrica válida';
+  }
+   return resultado
+}
+console.log(calcAllAreas(10, 50, 'triangulo'))
+
+
+// function calcTriangleArea(base, height){
+//   const triangulo = 
+// }
+// function calcRectangleArea(base, height){
+//   result (base * height);
+// }
+// function calcAllAreas(base, height, form){
+  
+// }
 
 // Desafio 7 - Crie a função catAndMouse
 
