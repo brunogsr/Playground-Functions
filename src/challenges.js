@@ -161,13 +161,15 @@ function decode(stringToDecode) {
 // Desafio 10 - Crie a função techList
 
 function techList(tecnologias, nome) {
-  let techAndName = {};
-
-  for (let index = 0; index < tecnologias.length; index += 1){
-    let techAndName =+ {tech: tecnologias[index]};
-    return techAndName
+  let techAndName = [];
+  let techOrganizado = tecnologias.sort();
+  
+  for (let index = 0; index < techOrganizado.length; index += 1){
+    techAndName.push({tech: techOrganizado[index], name: nome});
   }
+  return techAndName
 }
+// console.log(techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], 'Lucas'))
 
 module.exports = {
   calcTriangleArea: typeof calcTriangleArea === 'function' ? calcTriangleArea : (() => {}),
