@@ -4,11 +4,10 @@
 // const macaco = false;
 
 function compareTrue(parametroA, parametroB) {
-  if (parametroA === true && parametroB === true) {
+  if (parametroA === true && parametroB === true){
     return true;
   }
-
-  return false;
+    return false;
 }
 
 // Desafio 2 - Crie a função splitSentence
@@ -35,14 +34,22 @@ function footballPoints(wins, ties) {
   return resultado;
 }
 // Desafio 5 - Crie a função highestCount
-function highestCount(array) {
-  for (let index = 0; index < array.length; index += 1) {
+function highestCount(numeros){
+let maiorNumero = Math.max(...numeros)
+let resultado = 0
 
+  for(index = 0; index < numeros.length; index += 1){
+    if (maiorNumero === numeros[index]){
+    resultado += 1
+    }
   }
+  return resultado
 }
+highestCount([1, 2, 3, 6, 6])
 
 
-// console.log(highestCount([1, 2, 3, 4]));
+
+
 
 // Desafio 6 - Crie as funções calcTriangleArea, calcRectangleArea e calcAllAreas
 function calcTriangleArea(base, height) {
@@ -85,7 +92,7 @@ function catAndMouse(mouse, cat1, cat2) {
 
 function fizzBuzz(numeros) {
   const resultado = [];
-  for (let index = 0; index < numeros.length; index += 1) {
+  for (let index = 0; index < numeros.length; index += 1){
     const divisao3 = numeros[index] % 3 === 0;
     const divisao5 = numeros[index] % 5 === 0;
     // console.log(divisao3, divisao5)
@@ -104,56 +111,59 @@ function fizzBuzz(numeros) {
 
 fizzBuzz([15, 10, 3, 5, 7]);
 // Desafio 9 - Crie a função encode e a função decode
-function encode(string1){
+function encode(stringToEncode){
     const vogais = 'aeiou';
-    let string2 = '';
-    for(let index = 0; index < string1.length; index += 1){
-        if (vogais.indexOf(string1[index]) !== -1) {
-          if (string1[index] === 'a') {
-            string2 += '1'
-          } else if (string1[index] === 'e') {
-            string2 += '2'
-          } else if (string1[index] === 'i') {
-            string2 += '3'
-          } else if (string1[index] === 'o') {
-            string2 += '4'
-          } else if (string1[index] === 'u') {
-            string2 += '5'
+    let resultado = '';
+    for(let index = 0; index < stringToEncode.length; index += 1){
+        if (vogais.indexOf(stringToEncode[index]) !== -1){
+          if (stringToEncode[index] === 'a') {
+            resultado += '1'
+          } else if (stringToEncode[index] === 'e') {
+            resultado += '2'
+          } else if (stringToEncode[index] === 'i') {
+            resultado += '3'
+          } else if (stringToEncode[index] === 'o') {
+            resultado += '4'
+          } else if (stringToEncode[index] === 'u') {
+            resultado += '5'
           }
-      } else {
-        string2 += string1[index]
+      } else{
+        resultado += stringToEncode[index]
       }
     }
-    return string2
-}
-function decode(string1) {
+    return resultado
+  }
+function decode(stringToDecode) {
   let vogaisNumerais = '12345';
-  let string2 = '';
-  for(let index = 0; index < string1.length; index += 1){
-    if(vogaisNumerais.indexOf(string1[index]) !== -1){
-      if (string1[index] === '1'){
-        string2 += 'a'
-      } else if(string1[index] === '2'){
-        string2 += 'e'
-      } else if(string1[index] === '3'){
-        string2 += 'i'
-      } else if(string1[index] === '4'){
-        string2 += 'o'
-      } else if(string1[index] === '5'){
-        string2 += 'u'
+  let resultado = '';
+  for(let index = 0; index < stringToDecode.length; index += 1){
+    if(vogaisNumerais.indexOf(stringToDecode[index]) !== -1){
+      if (stringToDecode[index] === '1'){
+        resultado += 'a'
+      } else if(stringToDecode[index] === '2'){
+        resultado += 'e'
+      } else if(stringToDecode[index] === '3'){
+        resultado += 'i'
+      } else if(stringToDecode[index] === '4'){
+        resultado += 'o'
+      } else if(stringToDecode[index] === '5'){
+        resultado += 'u'
         }
-      } else {
-        string2 += string1[index]
+      } else{
+        resultado += stringToDecode[index]
       }
     
   }
-  return string2
+  return resultado
 }
 
 
-
-
 // Desafio 10 - Crie a função techList
+
+function techList(tecnologias, nomes){
+
+}
+// let 
 
 // Não modifique essas linhas
 module.exports = {
