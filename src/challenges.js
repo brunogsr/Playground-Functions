@@ -160,12 +160,15 @@ function decode(stringToDecode) {
 
 // Desafio 10 - Crie a função techList
 
-function techList(tecnologias, nomes){
+function techList(tecnologias, nome) {
+  let techAndName = {};
 
+  for (let index = 0; index < tecnologias.length; index += 1){
+    let techAndName =+ {tech: tecnologias[index]};
+    return techAndName
+  }
 }
-// let 
 
-// Não modifique essas linhas
 module.exports = {
   calcTriangleArea: typeof calcTriangleArea === 'function' ? calcTriangleArea : (() => {}),
   calcRectangleArea: typeof calcRectangleArea === 'function' ? calcRectangleArea : (() => {}),
