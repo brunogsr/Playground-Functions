@@ -1,8 +1,20 @@
 // Desafio 11 - Crie a função generatePhoneNumber
 
 // Desafio 12 -  Crie a função triangleCheck
+function triangleCheck(lineA, lineB, lineC) {
+let parametros = [lineA, lineB, lineC];
+let numerosOrdenados = parametros.sort((a, b) => a - b);
+if(numerosOrdenados[0] + numerosOrdenados[1] < numerosOrdenados[2]){
+return false
+} else{
+  return true
+}
+
+}
+triangleCheck(10, 13, 2)
 
 // Desafio 13 - Crie a função hydrate
+
 function hydrate (string){
 let resultado = 0;
 let calculo = string.match(/\d/g);
